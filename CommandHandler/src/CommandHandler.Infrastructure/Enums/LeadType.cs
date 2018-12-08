@@ -3,6 +3,7 @@
     public enum LeadType
     {
         CallCenter,
-        CustomerSupport
+        CustomerSupport,
+        Order
     }
 }

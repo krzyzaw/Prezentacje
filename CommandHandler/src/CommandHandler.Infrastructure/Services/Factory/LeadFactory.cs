@@ -21,10 +21,13 @@ namespace CommandHandler.Infrastructure.Services.Factory
             switch (leadType)
             {
                 case LeadType.CallCenter:
-                    await _leadService.CreateLeadAsync(command);
+                    await _leadService.CreateCallCenterLeadAsync(command);
                     break;
                 case LeadType.CustomerSupport:
                     await _emailService.SendAsync();
+                    break;
+                case LeadType.Order:
+                    await _leadService.CreateOrderLeadAsync(command);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(leadType), leadType, null);

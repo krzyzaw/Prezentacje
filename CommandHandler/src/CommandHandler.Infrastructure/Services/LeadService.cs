@@ -5,7 +5,12 @@ namespace CommandHandler.Infrastructure.Services
 {
     public class LeadService : ILeadService
     {
-        public Task CreateLeadAsync(ICommand lead)
+        public Task CreateCallCenterLeadAsync(ICommand lead)
+        {
+            return Task.CompletedTask;
+        }
+
+        public Task CreateOrderLeadAsync(ICommand lead)
         {
             return Task.CompletedTask;
         }

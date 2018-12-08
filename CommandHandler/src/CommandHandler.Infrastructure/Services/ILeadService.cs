@@ -5,6 +5,7 @@ namespace CommandHandler.Infrastructure.Services
 {
     public interface ILeadService : IService
     {
-        Task CreateLeadAsync(ICommand lead);
+        Task CreateCallCenterLeadAsync(ICommand lead);
+        Task CreateOrderLeadAsync(ICommand lead);
     }
 }
