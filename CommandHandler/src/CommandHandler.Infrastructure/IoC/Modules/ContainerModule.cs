@@ -8,6 +8,7 @@ namespace CommandHandler.Infrastructure.IoC.Modules
         {
             builder.RegisterModule<CommandModule>();
             builder.RegisterModule<ServiceModule>();
+            builder.RegisterModule<RepositoryModule>();
         }
     }
 }
