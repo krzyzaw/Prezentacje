@@ -5,16 +5,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CommandHandler.Api.Controllers
 {
-    [Route("[controller]")]
-    public class LeadController : ApiControllerBase
+    public class CustomerServiceController : ApiControllerBase
     {
-        public LeadController(ICommandDispatcher commandDispatcher) : base(commandDispatcher)
+        public CustomerServiceController(ICommandDispatcher commandDispatcher) : base(commandDispatcher)
         {
         }
 
         // POST 
-        [HttpPost("{lead}")]
-        public async Task<IActionResult> Create([FromBody] CreateLead command)
+        [HttpPost("{contactrequest}")]
+        public async Task<IActionResult> ContactRequest([FromBody] CreateContactRequest command)
         {
             await CommandDispatcher.DispatchAsync(command);
             return StatusCode(201);

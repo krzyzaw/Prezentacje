@@ -1,4 +1,4 @@
-﻿namespace CommandHandler.Infrastructure.Commands.Leads
+﻿namespace CommandHandler.Infrastructure.Commands.Forms
 {
     public class CreateLead : ICommand
     {
